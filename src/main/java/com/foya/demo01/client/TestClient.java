@@ -12,7 +12,7 @@ public class TestClient {
 	public static void main(String[] args) {
 		try {
 			//創建訪問wsdl服務地址的url
-			URL url = new URL("http://localhost:8888/ns?wsdl");
+			URL url = new URL("http://localhost:8888/demo01?wsdl");
 			//通過Qname指明服務的具體信息
 			QName sname = new QName("http://server.demo01.foya.com/", "MyServiceImplService");
 			//創建服務
