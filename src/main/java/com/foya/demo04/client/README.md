@@ -10,6 +10,11 @@ https://docs.oracle.com/cd/E19340-01/820-6767/aeqex/index.html
 
 ---
 
+### SOAP Fault Element
+![SOAP Messaging Layers](./info/SOAP_Fault_Element.gif)
+
+---
+
 ### SOAP Messaging Layers
 ![SOAP Messaging Layers](./info/SOAP_Messaging_Layers.gif)
 
