@@ -16,3 +16,4 @@ hs_err_pid*
 /.project
 /src/main/java/com/foya/demo04/client/test01Debug.xml
 /src/main/java/com/foya/demo04/client/test02Debug4out.xml
+/src/main/java/com/foya/demo04/client/tmp
