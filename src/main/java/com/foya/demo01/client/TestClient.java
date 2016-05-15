@@ -18,7 +18,7 @@ public class TestClient {
 			//創建服務
 			Service service = Service.create(url, sname);
 			//實現接口
-			IMyService ms = service.getPort(IMyService.class);
+			IMyService ms = service.getPort(com.foya.demo01.server.IMyService.class);
 			System.out.println(ms.add(12, 33));
 			//以上服務有問題，依然依賴於IMyServie接口
 		} catch (MalformedURLException e) {

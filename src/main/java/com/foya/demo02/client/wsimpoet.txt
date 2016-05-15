@@ -1,0 +1,1 @@
+wsimport -s F:\foya\02.tommy4Git\myWebServiceClient\src\main\java\ -keep -verbose http://localhost:8888/demo02?wsdl
