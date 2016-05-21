@@ -1,5 +1,5 @@
 
-package localhost._8888.demo03_wsdl;
+package com.foya.demo03.client.wsimport;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
-import com.foya.demo03.server.ObjectFactory;
-import com.foya.demo03.server.User;
 
 
 /**
@@ -35,8 +33,8 @@ public interface IMyService {
      */
     @WebMethod
     @WebResult(name = "addResult", targetNamespace = "")
-    @RequestWrapper(localName = "add", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.server.Add")
-    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.server.AddResponse")
+    @RequestWrapper(localName = "add", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.client.wsimport.Add")
+    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.client.wsimport.AddResponse")
     @Action(input = "http://server.demo03.foya.com/IMyService/addRequest", output = "http://server.demo03.foya.com/IMyService/addResponse")
     public int add(
         @WebParam(name = "a", targetNamespace = "")
@@ -53,8 +51,8 @@ public interface IMyService {
      */
     @WebMethod
     @WebResult(name = "minusResult", targetNamespace = "")
-    @RequestWrapper(localName = "minus", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.server.Minus")
-    @ResponseWrapper(localName = "minusResponse", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.server.MinusResponse")
+    @RequestWrapper(localName = "minus", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.client.wsimport.Minus")
+    @ResponseWrapper(localName = "minusResponse", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.client.wsimport.MinusResponse")
     @Action(input = "http://server.demo03.foya.com/IMyService/minusRequest", output = "http://server.demo03.foya.com/IMyService/minusResponse")
     public int minus(
         @WebParam(name = "a", targetNamespace = "")
@@ -67,12 +65,12 @@ public interface IMyService {
      * @param username
      * @param password
      * @return
-     *     returns com.foya.demo03.server.User
+     *     returns com.foya.demo03.client.wsimport.User
      */
     @WebMethod
     @WebResult(name = "loginUser", targetNamespace = "")
-    @RequestWrapper(localName = "login", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.server.Login")
-    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.server.LoginResponse")
+    @RequestWrapper(localName = "login", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.client.wsimport.Login")
+    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://server.demo03.foya.com/", className = "com.foya.demo03.client.wsimport.LoginResponse")
     @Action(input = "http://server.demo03.foya.com/IMyService/loginRequest", output = "http://server.demo03.foya.com/IMyService/loginResponse")
     public User login(
         @WebParam(name = "username", targetNamespace = "")

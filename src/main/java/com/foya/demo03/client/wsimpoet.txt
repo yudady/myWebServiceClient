@@ -1,1 +1,1 @@
-wsimport -s F:\foya\02.tommy4Git\myWebServiceClient\src\main\java\ -keep -verbose http://localhost:8888/demo03?wsdl
+wsimport -s F:\foya\02.tommy4Git\myWebServiceClient\src\main\java\ -p com.foya.demo03.client.wsimport -verbose http://localhost:8888/demo03?wsdl

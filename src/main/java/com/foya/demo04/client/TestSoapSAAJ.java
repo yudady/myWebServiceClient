@@ -120,6 +120,15 @@ public class TestSoapSAAJ {
 
 			// 2、創建Dispatch
 			QName portName = new QName(demo04TargetNamespace, "MyServiceImplPort"); // 要執行的哪個方法
+
+			/**
+			 * Dispatch API 可以在 PAYLOAD 或 MESSAGE 方式下發送數據。
+			 *
+			 * 使用 PAYLOAD 方式時，Dispatch client 僅負責提供 <soap:Body> 的內容，而 JAX-WS 在
+			 * <soap:Envelope> 元素中包含輸入有效內容。
+			 *
+			 * 使用 MESSAGE 方式時，Dispatch client 負責提供整個 SOAP 包絡。
+			 */
 			Dispatch<SOAPMessage> dispatch = service.createDispatch(portName, SOAPMessage.class, Service.Mode.MESSAGE);
 
 			// 3、創建SOAPMessage
@@ -168,7 +177,6 @@ public class TestSoapSAAJ {
 			SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
 			SOAPConnection soapConnection = soapConnectionFactory.createConnection();
 
-
 			// 3、創建SOAPMessage
 			MessageFactory messageFactory = MessageFactory.newInstance();
 			SOAPMessage soapMessage = messageFactory.createMessage();
@@ -180,12 +188,10 @@ public class TestSoapSAAJ {
 			soapEnvelope.addNamespaceDeclaration("enc", "http://schemas.xmlsoap.org/soap/encoding/");
 			soapEnvelope.addNamespaceDeclaration("env", "http://schemas.xmlsoap.org/soap/envelop/");
 
-
 			/**
 			 * look debug file
 			 */
 			soapEnvelope.addNamespaceDeclaration(nsPrefix, demo04TargetNamespace);
-
 
 			SOAPBody body = soapEnvelope.getBody();
 			//body.setPrefix("B");
@@ -226,8 +232,8 @@ public class TestSoapSAAJ {
 	private OutputStream outXmlFile4Debug(String fileName) {
 		FileOutputStream out = null;
 		try {
-			out = new FileOutputStream(new File(
-					System.getProperty("user.dir") + "/src/main/java/com/foya/demo04/client/tmp/" + fileName + ".xml"));
+			out = new FileOutputStream(new File(System.getProperty("user.dir")
+					+ "/src/main/java/com/foya/demo04/client/tmp/" + fileName + ".xml"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

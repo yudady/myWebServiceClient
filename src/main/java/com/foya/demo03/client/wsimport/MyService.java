@@ -1,5 +1,5 @@
 
-package localhost._8888.demo03_wsdl;
+package com.foya.demo03.client.wsimport;
 
 import java.net.MalformedURLException;
 import java.net.URL;
