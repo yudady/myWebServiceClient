@@ -1,0 +1,1 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns:add xmlns:ns="http://www.foya.com/webservice"><a>22</a><b>33</b></ns:add></SOAP-ENV:Body></SOAP-ENV:Envelope>

@@ -1,13 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com.foya.myWebServiceClient</groupId>
 	<artifactId>myWebServiceClient</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-
-
+	<packaging>pom</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,22 +12,40 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 
-	<!-- Lang should depend on very little -->
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-		</dependency>
 
-<!-- http://mvnrepository.com/artifact/org.apache.santuario/xmlsec -->
-<dependency>
-    <groupId>org.apache.santuario</groupId>
-    <artifactId>xmlsec</artifactId>
-    <version>2.0.4</version>
-</dependency>
+	<modules>
+		<module>jdk01</module>
+		<module>axis2</module>
+		<module>rpcClient01</module>
+		
+		
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- The tutorials use JUnit test cases to illustrate usage -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+			</dependency>
 
 
 
-	</dependencies>
+		</dependencies>
+
+	</dependencyManagement>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </project>

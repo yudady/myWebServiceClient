@@ -1,0 +1,14 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:enc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:env="http://schemas.xmlsoap.org/soap/envelop/"
+	xmlns:ns="http://server.demo04.foya.com/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<ns:add>
+			<a>22</a>
+			<b>33</b>
+		</ns:add>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
