@@ -17,6 +17,7 @@
 		<module>jdk01</module>
 		<module>axis2</module>
 		<module>rpcClient01</module>
+		<module>xfire01</module>
 		
 		
 	</modules>

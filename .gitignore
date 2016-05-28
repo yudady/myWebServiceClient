@@ -11,9 +11,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /target/
-/.settings
-/.classpath
-/.project
-/src/main/java/com/foya/demo04/client/test01Debug.xml
-/src/main/java/com/foya/demo04/client/test02Debug4out.xml
-/src/main/java/com/foya/demo04/client/tmp
+.settings
+.classpath
+.project
+
+/axis2/.settings
+/axis2/.classpath
+/axis2/.project
