@@ -18,7 +18,7 @@
 		<module>axis2</module>
 		<module>rpcClient01</module>
 		<module>xfire01</module>
-		
+		<module>cxf3_1_2</module>
 		
 	</modules>
 
